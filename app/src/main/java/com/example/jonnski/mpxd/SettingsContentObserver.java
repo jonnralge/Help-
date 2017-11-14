@@ -29,7 +29,6 @@ public class SettingsContentObserver extends ContentObserver {
     public SettingsContentObserver(Context c, Handler handler) {
         super(handler);
         context = c;
-        Toast.makeText(context, "Settings Content made", Toast.LENGTH_SHORT).show();
         AudioManager audio = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
         previousVolume = audio.getStreamVolume(AudioManager.STREAM_RING);
         dsp = PreferenceManager.getDefaultSharedPreferences(context);
